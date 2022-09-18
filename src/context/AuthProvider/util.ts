@@ -6,21 +6,18 @@ export function setUserLocalStorage(user: IUser | null) {
 };
 
 export function getUserLocalStorage(){
-    const json = localStorage.getItem("u");
+    const json = localStorage.getItem("U");
 
     if(!json){
         return null
     }
-
     const user = JSON.parse(json);
-
     return user ?? null;
 }
 
 export async function loginRequest(email: string, password: string) {
   try {
     const request = await api.post("/login", { email, password });
-    console.log("REQUEST DATA DO UTILS.TS =>", request.data);
     return request.data;
   } catch (error) {
     return null;
