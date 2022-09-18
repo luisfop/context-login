@@ -3,8 +3,8 @@ import { Form, Button, Card } from "react-bootstrap";
 
 const Signup = () => {
 
-    const emailRef = useRef()
-    const passwordRef = useRef()
+    const emailRef = useRef() as React.MutableRefObject<HTMLInputElement>;
+    const passwordRef = useRef() as React.MutableRefObject<HTMLInputElement>;
 
   return (
     <>
@@ -14,7 +14,7 @@ const Signup = () => {
           <Form>
             <Form.Group id="email">
               <Form.Label>Email</Form.Label>
-              <Form.Control type="email" ref={emailRef} required/>
+              <Form.Control type="email" ref={emailRef } required/>
             </Form.Group>
             <Form.Group id="password">
               <Form.Label>password</Form.Label>
