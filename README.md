@@ -60,3 +60,10 @@ The land page is the Login form.
 # PS:
 
 I chose not to use a form input validator library such as Vuelidate or Vuetify because I wanted to keep the code as simple and flexible as it was possible to integrate into any application.
+
+
+# To authenticate the user, use this example:
+{
+    "email": "eve.holt@reqres.in",
+    "password": "cityslicka"
+}
