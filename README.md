@@ -1,7 +1,7 @@
 # Hey, welcome!
 
   
-This project was created as a login example page that stores and persists the login to any simple application that works with REST Apis.
+This project was created by me as a login example page that stores and persists the login to any simple application that works with REST Apis.
 The framework used in this was ReactJs. A few tools were used as well, such as:
 
 - Context-API
