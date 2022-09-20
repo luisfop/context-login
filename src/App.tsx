@@ -11,9 +11,8 @@ function App() {
         <div className="w-100" style={{ maxWidth: '400px' }}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<PrivateRoutes/>}>
+          <Route path="/u" element={<PrivateRoutes/>}>
             <Route path="profile" element={<p>Profile Component</p>} />
-            <Route path="user" element={<p>Xablau componente caraio!</p>} />
           </Route>
 
               <Route path="/" element={<SignIn />}>
