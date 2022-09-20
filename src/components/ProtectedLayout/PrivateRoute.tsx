@@ -1,12 +1,12 @@
 import { Outlet, Navigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthProvider/useAuth';
-
+import SignIn from '../SignIn/SignIn';
 
 
 const PrivateRoutes = () => {
 
     let auth = useAuth();
-    return auth.token ? <Outlet/> : <h1>Sorry you dont have access!</h1>
+    return auth.token ? <Outlet/> : <SignIn/>
 
 }
 

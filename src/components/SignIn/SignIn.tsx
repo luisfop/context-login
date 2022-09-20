@@ -5,21 +5,21 @@ import { useAuth } from '../../context/AuthProvider/useAuth';
 
 const Signup = () => {
 
+  const navigate = useNavigate();
+
   const emailRef = useRef() as React.MutableRefObject<HTMLInputElement>;
   const passwordRef = useRef() as React.MutableRefObject<HTMLInputElement>;
 
   const [alert, setAlert] = useState<string>('');
 
   const auth = useAuth();
-  const navigate = useNavigate();
-
 
   async function onFinish(values: { email: string, password: string }, e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     e.preventDefault();
 
     try {
       await auth.authenticate(values.email, values.password)
-      navigate('/profile');
+      navigate('/profile',{replace: true});
 
     } catch (error) {
       setAlert('Email ou senha incorretos')

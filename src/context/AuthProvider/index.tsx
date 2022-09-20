@@ -2,8 +2,6 @@ import React, { createContext, useState, useEffect } from 'react';
 import { IAuthProvider, IContext, IUser } from './types';
 import { getUserLocalStorage, loginRequest, setUserLocalStorage } from './util';
 
-
-
 export const AuthContext = createContext<IContext>({} as IContext);
 
 
@@ -14,9 +12,6 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
     let authenticate = async (email: string, password: string) => {
 
         const response = await loginRequest(email, password);
-
-        console.log('RESPONSE DO INDEX.TSX =>', response);
-
         const payload = { token: response.token, email };
 
         //saving in state and in localStorage
@@ -28,7 +23,6 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
         setUser(null);
         setUserLocalStorage(null);
     }
-
 
     //If User is already logged;
     useEffect(() => {

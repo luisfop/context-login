@@ -13,10 +13,10 @@ function App() {
         <Routes>
           <Route path="/" element={<PrivateRoutes/>}>
             <Route path="profile" element={<p>Profile Component</p>} />
-            <Route path="xablau" element={<p>Xablau componente caraio!</p>} />
+            <Route path="user" element={<p>Xablau componente caraio!</p>} />
           </Route>
 
-              <Route path="/signin" element={<SignIn />}>
+              <Route path="/" element={<SignIn />}>
           </Route>
         </Routes>
       </BrowserRouter>
