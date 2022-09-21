@@ -1,8 +1,8 @@
 # Hey, welcome!
 
   
-This project was created by me as a login example page that stores and persists the login to any simple application that works with REST Apis.
-The framework used in this was ReactJs. A few tools were used as well, such as:
+This project was created by me as a login example page that stores and persists the login to any simple application that works with REST Apis and returns a TOKEN, that is saved on localStorage of the browser.
+The javascript/Typescript framework used to create this project was ReactJs. Here are a few tools used as well:
 
 - VITE
 - Context-API
@@ -17,7 +17,8 @@ etc...
 To check other dependencies please go to package.json
 
 
-It is important to notice that the user, once logged keeps the track of its token on localStorage, so when the page is refreshed by its user, it doesn’t logout!
+It is important to notice that the user, once logged keeps the track of its token on localStorage, so when the page is refreshed or even closed, it doesn’t logout.
+There is one protected route to simulate a navigation once the user is logged.
 
 
 # How to run
