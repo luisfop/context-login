@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react';
 import { IAuthProvider, IContext, IUser } from './types';
-import { getUserLocalStorage, loginRequest, setUserLocalStorage } from './util';
+import { getUserLocalStorage, setUserLocalStorage } from './util';
+import { login } from '../../services/api';
 
 export const AuthContext = createContext<IContext>({} as IContext);
 
@@ -10,10 +11,10 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
     const [user, setUser] = useState<IUser | null>();
 
     let authenticate = async (email: string, password: string) => {
+        //login api service bringing the token
+        const response = await login({email,password});
 
-        const response = await loginRequest(email, password);
-        const payload = { token: response.token, email };
-
+        const payload = { token: response.data.token, email };
         //saving in state and in localStorage
         setUser(payload);
         setUserLocalStorage(payload);
