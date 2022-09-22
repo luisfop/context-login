@@ -14,7 +14,6 @@ function App() {
           <Route path="/u" element={<PrivateRoutes/>}>
             <Route path="profile" element={<p>Profile Component</p>} />
           </Route>
-
               <Route path="/" element={<SignIn />}>
           </Route>
         </Routes>

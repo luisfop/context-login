@@ -19,7 +19,7 @@ const Signup = () => {
 
     try {
       await auth.authenticate(values.email, values.password)
-      navigate('/profile',{replace: true});
+      navigate('/u/profile',{replace: true});
 
     } catch (error) {
       setAlert('Email ou senha incorretos')
