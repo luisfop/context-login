@@ -1,4 +1,3 @@
-import { api } from "../../services/api";
 import { IUser } from "./types";
 
 export function setUserLocalStorage(user: IUser | null) {
@@ -13,13 +12,4 @@ export function getUserLocalStorage(){
     }
     const user = JSON.parse(json);
     return user ?? null;
-}
-
-export async function loginRequest(email: string, password: string) {
-  try {
-    const request = await api.post("/login", { email, password });
-    return request.data;
-  } catch (error) {
-    return null;
-  }
 }
