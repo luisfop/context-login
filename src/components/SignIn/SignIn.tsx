@@ -16,7 +16,7 @@ const Signup = () => {
 
   async function onFinish(values: { email: string, password: string }, e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     e.preventDefault();
-
+//async
     try {
       await auth.authenticate(values.email, values.password)
       navigate('/u/profile',{replace: true});
