@@ -1,4 +1,3 @@
-//facilitador pra receber o context;
 import { useContext } from 'react';
 import { AuthContext } from '.';
 
